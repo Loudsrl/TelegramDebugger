@@ -11,6 +11,35 @@
         "wires": []
     },
     {
+        "id": "7ed69f7d.0e04e",
+        "type": "http in",
+        "z": "70253855.046168",
+        "name": "",
+        "url": "/debug",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 202,
+        "y": 413,
+        "wires": [
+            [
+                "6a648955.838e68"
+            ]
+        ]
+    },
+    {
+        "id": "3751f77f.e5f0b8",
+        "type": "chatbot-telegram-receive",
+        "z": "70253855.046168",
+        "bot": "6b6063e1.13684c",
+        "x": 218,
+        "y": 316,
+        "wires": [
+            [
+                "613ca96d.ba78b8"
+            ]
+        ]
+    },
+    {
         "id": "6a648955.838e68",
         "type": "function",
         "z": "70253855.046168",
@@ -31,7 +60,7 @@
         "type": "function",
         "z": "70253855.046168",
         "name": "",
-        "func": "if (msg.payload.content == \"/debug\") {\n    var msg1 = {\"payload\": {\"chatId\" : msg.payload.chatId, \"type\" : 'message', \"content\" : \"Your chatId is: \" + msg.payload.chatId} };\n    return msg1;    \n} else {\n    var msg1 = {\"payload\": {\"chatId\" : msg.payload.chatId, \"type\" : 'message', \"content\" : \"To get your chatId write \\n /debug\"} };\n    return msg1; \n}\n",
+        "func": "if (msg.payload.content == \"/debug\") {\n    var msg1 = {\"payload\": {\"chatId\" : msg.payload.chatId, \"type\" : 'message', \"content\" : \"Your chatId is: \" + msg.payload.chatId} };\n    return msg1;    \n} else {\n    var msg1 = {\"payload\": {\"chatId\" : msg.payload.chatId, \"type\" : 'message', \"content\" : \"To get your chatId write /debug\"} };\n    return msg1; \n}\n",
         "outputs": 1,
         "noerr": 0,
         "x": 551,
@@ -46,7 +75,7 @@
         "id": "6b6063e1.13684c",
         "type": "chatbot-telegram-node",
         "z": "",
-        "botname": "ios-debug",
+        "botname": "TelegramDebugger",
         "usernames": "giangices",
         "polling": "1000",
         "log": ""
