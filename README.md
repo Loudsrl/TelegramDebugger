@@ -6,44 +6,37 @@ This way you can debug even when you are not in front of the computer.
 
 TelegramDebugger requires:
 
-- A [Node-RED](https://nodered.org/) server to run.
-- [CocoaPods](https://cocoapods.org/) installed on your machine.
-- An xcode project with [AlamoFire](https://cocoapods.org/pods/Alamofire) installed
+- Telegram 
+- One of the libraries included in this repo (for now only available JS/SWIFT).
+- FOR IOS: An xcode project with [AlamoFire](https://cocoapods.org/pods/Alamofire) imported 
 
-## Installation
+## Telegram bot
 
-Have you downloaded everything? Sure? Good.
+The only thing you need to do is go to your telegram and search for [Telegram Debugger 🥇](t.me/loud_debugger_bot) (Make sure it's the one with the medal ✌️).
+
+Send a message with the command /start and it will answer with your chatId (you will need it soon).
+
+You can even add it to your Dev group on telegram to maximise the fun 😂
+
+## Installation - iOS
+
+Have you checked everything? Sure? Good.
 
 First thing first. 
-
-Run the node-red instance with:
-
-```sh
-node-red
-```
-And go to [http://127.0.0.1:1880/](http://127.0.0.1:1880/#) to access the development console.
-
-Copy the json file included in [/server](https://github.com/Loudsrl/TelegramDebugger/tree/master/server) and click import on the top-right menu. 
-Import the json and you should be ready to deploy your server.
-
-After you completed this step you can now proceed to import the swift class inside your xcode project.
+You have to copy the swift class inside your xcode project.
 (Just copy the file inside the project folder, it's that easy).
 
-To use the plugin you dont need to import anything. 
+To use the plugin you dont need to import anything in the project. 
 
 <del>import Telegram Debugger<del>
 
-The only thing you need to do is go to your telegram and search for [TelegramDebugger](t.me/tdebugger_bot).
-
-Send a message with the command /debug and it will answer with your chatId (you will need it soon).
-
-Go back to xcode and write :
+In your swift class write :
 
 ```swift
 TDB.init(id: <place here your chatId>, server: "http://127.0.0.1:1880/debug")
 ```
 
-You can even change server if you decide to host your Node-RED somewhere else.
+You can even change server if you decide to host your server somewhere else.
 
 Aaand, you're pretty much done. 
 
@@ -53,6 +46,37 @@ To use the debugger just write :
 TDB.debugger(data: <here goes the thing you need to debug>)
 ```
 
+## Installation - iOS
+
+Have you checked everything? Sure? Good.
+First thing first. 
+
+Download the library and import it in your html like this : 
+
+```html
+<script type="text/javascript" src="<path>/<to>/TelegramDebugger.js"></script>
+```
+
+And then in your js : 
+
+```js
+var TDB = new TelegramDebugger(<yourChatId>,[<serverUrl>]);
+	TDB.log("Hello");
+ TDB.log(obj);
+```
+And you are pretty much done! 
+
+This acts as a Telegram debug as well as a simple console log (how convenient 😁)
 
 
+ ## Roadmap
+ 
+ The project is under development but we cannot do it all by ourselves, so feel free to contribute in any way via:
+ 
+ - Pull requests
+ - Issues
+ - Write to us to hello@loudsrl.com with suggestion, questions or simply to say hi (we don't bite 😁)
+ 
+ 
+ 
  
