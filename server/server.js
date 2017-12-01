@@ -37,7 +37,7 @@ app.use(function(req, res, next) {
 bot.onText(/\/start/, (msg) => {
     var chatId = msg.chat.id;
     console.log(msg);
-    var responseMsg = "Hi " + msg.from.first_name + "!\nList of commands:\n\n\/start - Start the bot.\n\/add - Add a site for start monitoring.\n\/remove - Remove a site monitoring.\n\/logs - Check all your sites status.\n\nDesigned by LOUD - Digital Agency\nDeveloped by Isonni Piergiuseppe\n:copyright:2017 LOUD S.r.l.";
+    var responseMsg = "Hi " + msg.from.first_name + "!\nHere's your chatId :"+ chatId +"\nYou will need it soon ;)\nList of commands:\n\n\/start - Start the bot.\n\nDesigned and developed by LOUD - Digital Agency\nloudsrl.com\n © 2017 LOUD S.r.l.";
     bot.sendMessage(chatId, responseMsg);
 });
 
