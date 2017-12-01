@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+<body>
+
+<script type="text/javascript" src="../TelegramDebugger.js"></script>
+<script type="text/javascript">
+
+	var hello = "Hello";
+	var obj = {
+		hello: "hello"
+	}
+	
+	var TDB = new TelegramDebugger(126896731, 'http://localhost:3000/debug');
+	TDB.log("Hello");
+	TDB.log(hello);
+	TDB.log(obj);
+</script>
+</body>
+</html>
