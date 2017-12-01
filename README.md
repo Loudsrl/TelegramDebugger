@@ -1,5 +1,5 @@
 # TelegramDebugger
-A simple yet effective way to debug apps, receive a message to your personal telegram bot instead of the boring, old console in xcode. 
+A simple yet effective way to debug apps, receive a message to your personal telegram bot instead of the boring, old console. 
 This way you can debug even when you are not in front of the computer.
 
 ## Requirements
