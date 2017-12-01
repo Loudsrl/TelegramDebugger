@@ -47,7 +47,7 @@ bot.sendMessage(126896731, "Server avviato");
 
 
 
-app.get('/', (req, res) => res.send('Hello World!'));
+app.get('/debug', (req, res) => res.send('Hello World!'));
 app.post('/debug', function (req, res) {
     console.log(req.body);
     console.log(req.headers);
