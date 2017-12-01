@@ -44,8 +44,9 @@ bot.onText(/\/start/, (msg) => {
 bot.on('message', (msg) => {
   const chatIdMessage = msg.chat.id;
 
-  // send a message to the chat acknowledging receipt of their message
-  bot.sendMessage(chatIdMessage, 'Hey there, I can\'t receive messages yet, why don\'t you try with /start?');
+  if (msg.text != '/start' || msg.text != '/start ') {
+    bot.sendMessage(chatIdMessage, 'Hey there, I can\'t receive messages yet, why don\'t you try with /start?');
+  }
 });
 
 bot.sendMessage(126896731, "Server avviato");
