@@ -44,7 +44,9 @@ bot.onText(/\/start/, (msg) => {
 bot.on('message', (msg) => {
   const chatIdMessage = msg.chat.id;
 
-  if (msg.text != '/start' || msg.text != '/start ') {
+  console.log(msg)
+
+  if (msg.text != '/start' && msg.text != '/start ') {
     bot.sendMessage(chatIdMessage, 'Hey there, I can\'t receive messages yet, why don\'t you try with /start?');
   }
 });
