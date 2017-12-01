@@ -9,7 +9,7 @@
 
 var TelegramDebugger = function(id, server) {
     this.id = id || 0;
-    this.server = server || "http://127.0.0.1:1880/debug";
+    this.server = server || "https://tdb.loudsrl.com/debug";
     this.ajaxRequest = function(p) {
         var xmlhttp;
         xmlhttp = new XMLHttpRequest();
